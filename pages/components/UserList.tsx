@@ -27,10 +27,12 @@ export default function UserList({
       </thead>
 
       <tbody className="divide-y divide-gray-500 ">
+   
         {users.map((user, index) => {
           const backgroundColor = index % 2 === 0 ? "#888" : "#999";
           const color = showColors ? backgroundColor : "transparent";
 
+          
           return (
             <tr
               key={user.login.uuid}
@@ -39,20 +41,20 @@ export default function UserList({
             >
               <td>
                 <img
-                  className="h-12 w-12 flex-none rounded-full bg-gray-50"
+                  className="h-12 w-12 flex-none rounded-full bg-gray-50 m-3"
                   src={user.picture.thumbnail}
                 ></img>
               </td>
-              <td className="text-sm font-semibold leading-6 text-gray-900">
+              <td className="text-sm font-semibold leading-6 text-gray-900 p-5">
                 {user.name.first}
               </td>
-              <td className="text-sm font-semibold leading-6 text-gray-900">
+              <td className="text-sm font-semibold leading-6 text-gray-900 p-5">
                 {user.name.last}
               </td>
-              <td className="text-sm font-semibold leading-6 text-gray-900">
+              <td className="text-sm font-semibold leading-6 text-gray-900 p-5">
                 {user.email}
               </td>
-              <td className="text-sm font-semibold leading-6 text-gray-900">
+              <td className="text-sm font-semibold leading-6 text-gray-900 p-5">
                 {user.location.country}
               </td>
               <td>
@@ -60,6 +62,7 @@ export default function UserList({
                   onClick={() => {
                     deleteUser(user.login.uuid);
                   }}
+                  className="m-3"
                 >
                   {" "}
                   <svg

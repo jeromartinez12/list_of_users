@@ -64,7 +64,6 @@ export default function Home() {
       [SortBy.LAST]: (user) => user.name.last,
       [SortBy.COUNTRY]: (user) => user.location.country,
       [SortBy.EMAIL]: (user) => user.email,
-
     };
 
     return filteredUsers.toSorted((a, b) => {
@@ -98,16 +97,20 @@ export default function Home() {
           />
         </div>
       </header>
-      <main
-        className={`flex flex-col items-center justify-center p-12 ${inter.className}`}
-      >
+
+      <main className={`flex flex-col items-center justify-center p-12 ${inter.className}`}>
+      {users ? (
         <UserList
-          changeSorting={handleChangeSort}
-          deleteUser={handleDelete}
-          showColors={showColors}
-          users={sortedUsers}
+        changeSorting={handleChangeSort}
+        deleteUser={handleDelete}
+        showColors={showColors}
+        users={sortedUsers}
         />
-      </main>
+      ) : (
+        <div>Cargando usuarios...</div>
+      )}
+    </main>
+
     </>
   );
 }
