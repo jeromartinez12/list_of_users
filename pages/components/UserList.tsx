@@ -13,7 +13,8 @@ export default function UserList({
   deleteUser,
   changeSorting,
 }: UserListProps) {
-  if (users.length === 0) {
+
+  if (!Array.isArray(users)) {
     return <div>Cargando...</div>;
   }
 
