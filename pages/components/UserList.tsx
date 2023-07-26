@@ -13,6 +13,10 @@ export default function UserList({
   deleteUser,
   changeSorting,
 }: UserListProps) {
+  if (users.length === 0) {
+    return <div>Cargando...</div>;
+  }
+
   return (
     <table className="divide-y divide-gray-800 text-center max-w-7xl">
       <thead>
