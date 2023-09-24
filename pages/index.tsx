@@ -75,22 +75,22 @@ export default function Home() {
   return (
     <>
       <header className="flex flex-col justify-center items-center p-12">
-        <h1 className="text-4xl font-bold">Lista de usuarios</h1>
+        <h1 className="text-4xl font-bold">List of users</h1>
         <div className="flex justify-center items-center p-4">
           <button className="p-4" onClick={toogleColors}>
-            Colorear
+            Apply color
           </button>
           <button className="p-4" onClick={toogleSortByCountry}>
             {sorting === SortBy.COUNTRY
-              ? "No ordenar por país"
-              : "Ordenar por país"}
+              ? "Don't sort by country."
+              : "Sort by country"}
           </button>
           <button className="p-4" onClick={handleReset}>
             Reset
           </button>
           <input
             className="p-4"
-            placeholder="Filtrar por país"
+            placeholder="Filter by country"
             onChange={(e) => {
               setFilterCountry(e.target.value);
             }}
@@ -107,7 +107,7 @@ export default function Home() {
         users={sortedUsers}
         />
       ) : (
-        <div>Cargando usuarios...</div>
+        <div>Loading users...</div>
       )}
     </main>
 
