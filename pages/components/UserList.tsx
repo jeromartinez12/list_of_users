@@ -23,10 +23,10 @@ export default function UserList({
       <thead>
         <tr className="leading-6 text-gray-900">
           <th>Foto</th>
-          <th className="cursor-pointer" onClick={()=>changeSorting(SortBy.NAME)}>Nombre</th>
-          <th className="cursor-pointer" onClick={()=>changeSorting(SortBy.LAST)}>Apellido</th>
-          <th className="cursor-pointer" onClick={()=>changeSorting(SortBy.EMAIL)}>Correo</th>
-          <th className="cursor-pointer" onClick={()=>changeSorting(SortBy.COUNTRY)}>País</th>
+          <th className="cursor-pointer" onClick={()=>changeSorting(SortBy.NAME)}>Name</th>
+          <th className="cursor-pointer" onClick={()=>changeSorting(SortBy.LAST)}>Last Name</th>
+          <th className="cursor-pointer" onClick={()=>changeSorting(SortBy.EMAIL)}>Email</th>
+          <th className="cursor-pointer" onClick={()=>changeSorting(SortBy.COUNTRY)}>Country</th>
           <th>Acciones</th>
         </tr>
       </thead>
