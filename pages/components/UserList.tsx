@@ -22,12 +22,12 @@ export default function UserList({
     <table className="divide-y divide-gray-800 text-center max-w-7xl">
       <thead>
         <tr className="leading-6 text-gray-900">
-          <th>Foto</th>
+          <th>Photo</th>
           <th className="cursor-pointer" onClick={()=>changeSorting(SortBy.NAME)}>Name</th>
           <th className="cursor-pointer" onClick={()=>changeSorting(SortBy.LAST)}>Last Name</th>
           <th className="cursor-pointer" onClick={()=>changeSorting(SortBy.EMAIL)}>Email</th>
           <th className="cursor-pointer" onClick={()=>changeSorting(SortBy.COUNTRY)}>Country</th>
-          <th>Acciones</th>
+          <th>Delete</th>
         </tr>
       </thead>
 
